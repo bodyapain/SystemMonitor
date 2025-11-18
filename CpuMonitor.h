@@ -10,8 +10,6 @@ class CpuMonitor : public ProcessMonitor<CpuMonitor>
 	void onStop();
 	void onReport();
 private:
-	ULARGE_INTEGER m_lastIdleTime;
-	ULARGE_INTEGER m_lastSystemTime;
 	FILETIME idleTimePrev = {}, kernelTimePrev {}, userTimePrev = {};
 };
 
